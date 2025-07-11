@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div style="text-align: center;" class="container">
+    <h1 class="title">This is toDoList</h1>
+    <p class="subtitle">This todolist app this helps to organize your days routine and what you will do </p>
+  </div>
+  <div class="box">
+    <h1 id="heading"><%= title %> </h1>
+  </div>
+
+
+  <div class="box">
+    <% for(let i=0;i<newListitems.length;i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%= newListitems[i] %></p>
+      </div>
+      <% } %>
+      <form action="/" method="post">
+        <input type="text" name="newitem" id="" placeholder="New item" autocomplete="off">
+        <button type="submit">+</button>
+      </form>
+  </div>
+  
+</body>
+</html>
